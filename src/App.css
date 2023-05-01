@@ -1,0 +1,15 @@
+* {
+  margin: none;
+  padding: none;
+  box-sizing: border-box;
+}
+
+p {
+  color: #868a8a;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 350px;
+}

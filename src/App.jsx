@@ -22,11 +22,17 @@ function App() {
     fetchData();
   }, []);
 
-  return;
-
-  <div>
-    <h2>{data.categories.name}</h2>
-  </div>;
+  return isLoading ? (
+    <>
+      <div>En cours de chargement...</div>
+    </>
+  ) : (
+    <>
+      <h1>{data.restaurant.name}</h1>
+      <p>{data.restaurant.description}</p>
+      <img src={data.restaurant.picture} alt="" />
+    </>
+  );
 }
 
 export default App;
