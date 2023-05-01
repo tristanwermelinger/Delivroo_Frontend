@@ -12,7 +12,7 @@ function App() {
         const response = await axios.get(
           "https://site--backend-delivroo--2hknkt95d96x.code.run/"
         );
-        console.log(response.data);
+        //console.log(response.data);
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
