@@ -12,7 +12,7 @@ function App() {
         const response = await axios.get(
           "https://site--backend-delivroo--2hknkt95d96x.code.run/"
         );
-        //console.log(response.data);
+        console.log(response.data);
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -22,13 +22,11 @@ function App() {
     fetchData();
   }, []);
 
-  return isLoading ? (
-    <span>En cours de chargement...</span>
-  ) : (
-    <div>
-      <p>hello</p>
-    </div>
-  );
+  return;
+
+  <div>
+    <h2>{data.categories.name}</h2>
+  </div>;
 }
 
 export default App;
