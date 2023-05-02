@@ -24,34 +24,48 @@ function App() {
   }, []);
 
   return isLoading ? (
-    <>
-      <div>En cours de chargement...</div>
-    </>
+    <p>En cours de chargement...</p>
   ) : (
-    <>
-      <header></header>
-      <section>
-        <h1>{data.restaurant.name}</h1>
-        <p>{data.restaurant.description}</p>
-        <img src={data.restaurant.picture} alt="tartines" />
+    <div>
+      <header>
+        <div className="container">
+          {/* chercher l'image du logo */}
+          <img src="logo" alt="" />
+        </div>
+      </header>
+      <section className="hero">
+        <div className="container">
+          <div>
+            <h1>{data.restaurant.name}</h1>
+            <p>{data.restaurant.description}</p>
+          </div>
+          <img src={data.restaurant.picture} alt="tartines" />
+        </div>
       </section>
       <main>
-        {data.categories.map((category) => {
-          if (category.meals.length !== 0) {
-            return (
-              <div key={category.name}>
-                <h2>{category.name}</h2>
-                {category.meals.map((meal) => {
-                  return <Meal key={meal.id} meal={meal} />;
-                })}
-              </div>
-            );
-          } else {
-            return null;
-          }
-        })}
+        <div className="container">
+          <section className="col-left">
+            {data.categories.map((category) => {
+              if (category.meals.length !== 0) {
+                return (
+                  <div key={category.name}>
+                    <h2>{category.name}</h2>
+                    <div className="meals-container">
+                      {category.meals.map((meal) => {
+                        return <Meal key={meal.id} meal={meal} />;
+                      })}
+                    </div>
+                  </div>
+                );
+              } else {
+                return null;
+              }
+            })}
+          </section>
+          <section className="col-right"></section>
+        </div>
       </main>
-    </>
+    </div>
   );
 }
 

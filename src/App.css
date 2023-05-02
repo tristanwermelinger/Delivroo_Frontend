@@ -1,16 +1,123 @@
-* {
-  margin: none;
-  padding: none;
-  box-sizing: border-box;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-p {
-  color: #868a8a;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  display: flex;
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 45px 0;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+h3 {
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 img {
+  height: 100px;
+}
+
+header {
+  border-bottom: 1px solid lightgrey;
+}
+
+header img {
+  height: 60px;
+}
+
+/* * {
+  margin: none;
+  padding: none;
+  box-sizing: border-box;
+} */
+
+.hero p {
+  color: #868a8a;
+  font-size: 19px;
+  line-height: 28px;
+}
+
+.hero img {
   width: 350px;
+  height: 200px;
+  object-fit: cover;
+  border: 6px;
+}
+
+.hero .container {
+  display: flex;
+  padding: 20px 0;
+}
+
+/*--Main--*/
+
+main {
+  background-color: #f3f5f5;
+}
+
+main .container {
+  padding: 20px 0;
+  display: flex;
+  gap: 30px;
+}
+
+main .col-left {
+  /* background-color: red; */
+  flex: 68;
+}
+
+main .col-right {
+  height: 20px;
+  width: 20px;
+  flex: 32;
+}
+
+main .meals-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+main article {
+  width: 48%;
+  height: 160px;
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  display: flex;
+}
+
+main img {
+  height: 130px;
+  width: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-left: 10px;
+}
+
+main .meal-description {
+  line-height: 20px;
+  overflow: hidden;
+  height: 43px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+main .price-popular {
+  display: flex;
+}
+
+main .popular {
+  color: orange;
+  margin-left: 20px;
 }
