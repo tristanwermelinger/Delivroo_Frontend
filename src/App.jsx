@@ -72,11 +72,12 @@ function App() {
           </section>
           <section className="col-right">
             {cart.map((meal, index) => {
-              return;
-              <div key="{meal.id">
-                <span>Title :</span>
-                <span>{meal.title}</span>
-              </div>;
+              return (
+                <div key={index}>
+                  <span>Title :</span>
+                  <span>{meal.title}</span>
+                </div>
+              );
             })}
             <button>Valider mon panier</button>
             <div className="panier_vide">Votre panier est vide</div>
