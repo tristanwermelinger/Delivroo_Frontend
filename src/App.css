@@ -110,13 +110,14 @@ main .meals-container {
 
 main article {
   width: 48%;
-  height: 160px;
+  height: 180px;
   margin-bottom: 20px;
   background-color: white;
   padding: 15px;
   box-sizing: border-box;
   border-radius: 6px;
   display: flex;
+  cursor: pointer;
 }
 
 main img {

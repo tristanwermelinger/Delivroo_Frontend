@@ -1,6 +1,12 @@
-const Meal = ({ meal }) => {
+const Meal = ({ meal, cart, setCart }) => {
   return (
-    <article onClick="">
+    <article
+      onClick={() => {
+        const copyCart = [...cart];
+        copyCart.push(meal);
+        setCart(copyCart);
+      }}
+    >
       <div>
         <h3>{meal.title}</h3>
         {meal.description && (

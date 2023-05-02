@@ -7,6 +7,7 @@ import logo from "./assets/logo.png";
 function App() {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -52,7 +53,14 @@ function App() {
                     <h2>{category.name}</h2>
                     <div className="meals-container">
                       {category.meals.map((meal) => {
-                        return <Meal key={meal.id} meal={meal} />;
+                        return (
+                          <Meal
+                            key={meal.id}
+                            meal={meal}
+                            cart={cart}
+                            setCart={setCart}
+                          />
+                        );
                       })}
                     </div>
                   </div>
@@ -63,6 +71,13 @@ function App() {
             })}
           </section>
           <section className="col-right">
+            {cart.map((meal, index) => {
+              return;
+              <div key="{meal.id">
+                <span>Title :</span>
+                <span>{meal.title}</span>
+              </div>;
+            })}
             <button>Valider mon panier</button>
             <div className="panier_vide">Votre panier est vide</div>
           </section>
