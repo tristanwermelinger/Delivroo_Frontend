@@ -2,6 +2,7 @@ import "./App.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Meal from "./components/Meal";
+import logo from "./assets/logo.png";
 
 function App() {
   const [data, setData] = useState();
@@ -29,8 +30,7 @@ function App() {
     <div>
       <header>
         <div className="container">
-          {/* chercher l'image du logo */}
-          <img src="logo" alt="" />
+          <img src={logo} alt="" />
         </div>
       </header>
       <section className="hero">
@@ -62,7 +62,10 @@ function App() {
               }
             })}
           </section>
-          <section className="col-right"></section>
+          <section className="col-right">
+            <button>Valider mon panier</button>
+            <div className="panier_vide">Votre panier est vide</div>
+          </section>
         </div>
       </main>
     </div>

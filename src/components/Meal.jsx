@@ -1,6 +1,6 @@
 const Meal = ({ meal }) => {
   return (
-    <article>
+    <article onClick="">
       <div>
         <h3>{meal.title}</h3>
         {meal.description && (
